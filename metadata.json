@@ -1,0 +1,6 @@
+{
+  "name": "OmniClinic Practice Website",
+  "description": "A highly-adaptable, professional, and trustworthy multi-specialty clinic template, switchable for Dental, Physiotherapy, Dermatology, and Eye care practices.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
