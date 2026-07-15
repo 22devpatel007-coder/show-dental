@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { clinicConfigs } from './data/clinicTemplates';
-import ReviewToolbar from './components/ReviewToolbar';
+import React, { useEffect } from 'react';
+import { clinicConfig } from './data/clinicTemplates';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutDoctor from './components/AboutDoctor';
@@ -13,78 +12,42 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
-  const [activeConfigId, setActiveConfigId] = useState<string>('dental');
-  const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
-
-  const activeConfig = clinicConfigs[activeConfigId] || clinicConfigs.dental;
-
-  // Dynamically update document title to mimic a real production launch
   useEffect(() => {
-    document.title = `${activeConfig.displayName} | Professional Medical Practice`;
-  }, [activeConfig]);
-
-  // Handle cross-fade transition when template changes
-  const handleSelectConfig = (id: string) => {
-    if (id === activeConfigId) return;
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setActiveConfigId(id);
-      setIsTransitioning(false);
-      
-      // Smooth scroll back to top of section or viewport after brand change
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }, 250);
-  };
+    document.title = `${clinicConfig.displayName} | Professional Medical Practice`;
+  }, []);
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-700 selection:bg-slate-200 antialiased" id="clinic-master-wrapper">
-      
-      {/* 1. Interactive Presenter Toolbar (Discreet & dismissible review panel) */}
-      <ReviewToolbar
-        currentId={activeConfigId}
-        onSelectConfig={handleSelectConfig}
-        configs={clinicConfigs}
-      />
-
-      {/* Main Website Wrapper with transition crossfade */}
-      <div
-        className={`transition-opacity duration-300 ${
-          isTransitioning ? 'opacity-0' : 'opacity-100'
-        }`}
-      >
+      <div>
         {/* 2. Header & Navigation (Sticky bar) */}
-        <Navbar config={activeConfig} />
+        <Navbar config={clinicConfig} />
 
         {/* 3. Hero Trust Landing */}
-        <Hero config={activeConfig} />
+        <Hero config={clinicConfig} />
 
         {/* 4. About Doctor biography */}
-        <AboutDoctor config={activeConfig} />
+        <AboutDoctor config={clinicConfig} />
 
         {/* 5. Specialities & Services */}
-        <Services config={activeConfig} />
+        <Services config={clinicConfig} />
 
         {/* 6. Why Choose Us (Clinical Trust benchmarks) */}
-        <WhyChooseUs config={activeConfig} />
+        <WhyChooseUs config={clinicConfig} />
 
         {/* 7. Patient Reviews / Testimonials */}
-        <Testimonials config={activeConfig} />
+        <Testimonials config={clinicConfig} />
 
         {/* 8. Facility Tour Gallery */}
-        <Gallery config={activeConfig} />
+        <Gallery config={clinicConfig} />
 
         {/* 9. Appointment Intake Request Form */}
-        <AppointmentForm config={activeConfig} />
+        <AppointmentForm config={clinicConfig} />
 
         {/* 10. Contact Details & Iframe Map */}
-        <Contact config={activeConfig} />
+        <Contact config={clinicConfig} />
 
         {/* 11. Footer & Disclaimers */}
-        <Footer config={activeConfig} />
-        
+        <Footer config={clinicConfig} />
       </div>
     </div>
   );
