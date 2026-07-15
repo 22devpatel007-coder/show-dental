@@ -22,7 +22,7 @@ export default function WhyChooseUs({ config }: WhyChooseUsProps) {
               Our Standards
             </span>
             
-            <h2 className="font-sans font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 leading-tight tracking-tight">
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 leading-tight tracking-tight">
               Setting the Benchmark for Modern Clinical Care
             </h2>
             
@@ -52,17 +52,17 @@ export default function WhyChooseUs({ config }: WhyChooseUsProps) {
             {props.map((prop) => (
               <div
                 key={prop.id}
-                className="bg-white p-5.5 rounded-xl border border-slate-200/60 shadow-[0_1px_2px_rgba(0,0,0,0.01)] flex flex-col gap-4.5 transition-transform duration-200 hover:-translate-y-0.5"
+                className="bg-white p-6 rounded-2xl border border-slate-200/70 shadow-sm hover:shadow-lg hover:shadow-slate-900/5 hover:border-slate-300 flex flex-col gap-4.5 transition-all duration-300 hover:-translate-y-1"
                 id={`value-prop-card-${prop.id}`}
               >
                 {/* Icon Container */}
-                <div className={`p-2.5 rounded-lg w-fit ${config.colors.primaryLight} ${config.colors.primaryText}`}>
-                  <LucideIcon name={prop.iconName} size={18} />
+                <div className={`p-3 rounded-xl w-fit ${config.colors.primaryLight} ${config.colors.primaryText}`}>
+                  <LucideIcon name={prop.iconName} size={20} />
                 </div>
                 
                 {/* Text Content */}
                 <div>
-                  <h3 className="font-sans font-bold text-sm text-slate-900 leading-snug">
+                  <h3 className="font-sans font-bold text-base text-slate-900 leading-snug">
                     {prop.title}
                   </h3>
                   <p className="font-sans text-xs sm:text-sm text-slate-500 leading-relaxed mt-2">

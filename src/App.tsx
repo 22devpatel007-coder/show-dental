@@ -7,9 +7,11 @@ import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
 import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
+import FAQ from './components/FAQ';
 import AppointmentForm from './components/AppointmentForm';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ScrollReveal from './components/ScrollReveal';
 
 export default function App() {
   useEffect(() => {
@@ -26,27 +28,46 @@ export default function App() {
         <Hero config={clinicConfig} />
 
         {/* 4. About Doctor biography */}
-        <AboutDoctor config={clinicConfig} />
+        <ScrollReveal>
+          <AboutDoctor config={clinicConfig} />
+        </ScrollReveal>
 
         {/* 5. Specialities & Services */}
-        <Services config={clinicConfig} />
+        <ScrollReveal>
+          <Services config={clinicConfig} />
+        </ScrollReveal>
 
         {/* 6. Why Choose Us (Clinical Trust benchmarks) */}
-        <WhyChooseUs config={clinicConfig} />
+        <ScrollReveal>
+          <WhyChooseUs config={clinicConfig} />
+        </ScrollReveal>
 
         {/* 7. Patient Reviews / Testimonials */}
-        <Testimonials config={clinicConfig} />
+        <ScrollReveal>
+          <Testimonials config={clinicConfig} />
+        </ScrollReveal>
 
         {/* 8. Facility Tour Gallery */}
-        <Gallery config={clinicConfig} />
+        <ScrollReveal>
+          <Gallery config={clinicConfig} />
+        </ScrollReveal>
 
-        {/* 9. Appointment Intake Request Form */}
-        <AppointmentForm config={clinicConfig} />
+        {/* 9. Frequently Asked Questions */}
+        <ScrollReveal>
+          <FAQ config={clinicConfig} />
+        </ScrollReveal>
 
-        {/* 10. Contact Details & Iframe Map */}
-        <Contact config={clinicConfig} />
+        {/* 10. Appointment Intake Request Form */}
+        <ScrollReveal>
+          <AppointmentForm config={clinicConfig} />
+        </ScrollReveal>
 
-        {/* 11. Footer & Disclaimers */}
+        {/* 11. Contact Details & Iframe Map */}
+        <ScrollReveal>
+          <Contact config={clinicConfig} />
+        </ScrollReveal>
+
+        {/* 12. Footer & Disclaimers */}
         <Footer config={clinicConfig} />
       </div>
     </div>

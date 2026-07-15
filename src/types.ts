@@ -31,7 +31,7 @@ export interface TestimonialItem {
   rating: number;
   date: string;
   photoUrl: string;
-  tag: string; // e.g., "Dental Patient", "Knee Rehab"
+  tag: string;
 }
 
 export interface GalleryItem {
@@ -39,6 +39,12 @@ export interface GalleryItem {
   title: string;
   category: string;
   imageUrl: string;
+}
+
+export interface FaqItem {
+  id: string;
+  question: string;
+  answer: string;
 }
 
 export interface ContactInfo {
@@ -51,7 +57,7 @@ export interface ContactInfo {
     sunday: string;
   };
   whatsappNumber: string;
-  mapEmbedUrlUrl: string; // for the simulated embedded google map
+  mapEmbedUrlUrl: string;
 }
 
 export interface ClinicConfig {
@@ -62,11 +68,11 @@ export interface ClinicConfig {
   logoText: string;
   tagline: string;
   colors: {
-    primary: string;       // e.g., "bg-blue-600" or hex-related CSS
-    primaryHover: string;  // hover state color class
-    primaryText: string;   // text color class e.g. text-blue-600
-    primaryLight: string;  // e.g. bg-blue-50
-    accent: string;        // text or bg accent
+    primary: string;
+    primaryHover: string;
+    primaryText: string;
+    primaryLight: string;
+    accent: string;
     accentLight: string;
   };
   hero: {
@@ -81,5 +87,6 @@ export interface ClinicConfig {
   whyChooseUs: ValueProp[];
   testimonials: TestimonialItem[];
   gallery: GalleryItem[];
+  faq: FaqItem[];
   contact: ContactInfo;
 }

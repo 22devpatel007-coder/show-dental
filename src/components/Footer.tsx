@@ -48,7 +48,7 @@ export default function Footer({ config }: FooterProps) {
           {/* Brand Info (Col 5) */}
           <div className="md:col-span-5 flex flex-col gap-4">
             <div className="flex items-center gap-2">
-              <div className={`p-2 rounded-lg text-white ${config.colors.primary}`}>
+              <div className={`p-2 rounded-lg text-white shadow-sm ${config.colors.primary}`}>
                 <LucideIcon name={brandIcon} size={20} />
               </div>
               <span className="font-bold text-lg text-white tracking-tight">
@@ -61,15 +61,15 @@ export default function Footer({ config }: FooterProps) {
             </p>
 
             {/* Verification highlights */}
-            <div className="flex items-center gap-2.5 mt-3 text-[11px] text-slate-400 font-semibold bg-slate-900/50 p-3 rounded-lg w-fit border border-slate-900">
-              <ShieldCheck size={14} className="text-emerald-500" />
+            <div className="flex items-center gap-2.5 mt-3 text-[11px] text-slate-400 font-semibold bg-slate-900/60 p-3 rounded-lg w-fit border border-slate-800">
+             <ShieldCheck size={14} className="text-emerald-500" />
               <span>Certified Private Specialist Clinic</span>
             </div>
           </div>
 
           {/* Quick links (Col 3) */}
           <div className="md:col-span-3 flex flex-col gap-3">
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-2">
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-3">
               Navigation
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm">
@@ -77,7 +77,7 @@ export default function Footer({ config }: FooterProps) {
                 <a
                   href="#home"
                   onClick={(e) => handleScrollTo(e, '#home')}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-white hover:translate-x-0.5 inline-block transition-all"
                 >
                   Clinical Home
                 </a>
@@ -86,7 +86,7 @@ export default function Footer({ config }: FooterProps) {
                 <a
                   href="#about"
                   onClick={(e) => handleScrollTo(e, '#about')}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-white hover:translate-x-0.5 inline-block transition-all"
                 >
                   Meet Dr. {config.doctor.name.split(',')[0].replace('Dr. ', '')}
                 </a>
@@ -95,7 +95,7 @@ export default function Footer({ config }: FooterProps) {
                 <a
                   href="#services"
                   onClick={(e) => handleScrollTo(e, '#services')}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-white hover:translate-x-0.5 inline-block transition-all"
                 >
                   Medical Services
                 </a>
@@ -104,7 +104,7 @@ export default function Footer({ config }: FooterProps) {
                 <a
                   href="#testimonials"
                   onClick={(e) => handleScrollTo(e, '#testimonials')}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-white hover:translate-x-0.5 inline-block transition-all"
                 >
                   Patient Stories
                 </a>
@@ -113,7 +113,7 @@ export default function Footer({ config }: FooterProps) {
                 <a
                   href="#gallery"
                   onClick={(e) => handleScrollTo(e, '#gallery')}
-                  className="hover:text-white transition-colors"
+                  className="hover:text-white hover:translate-x-0.5 inline-block transition-all"
                 >
                   Take Clinic Tour
                 </a>
@@ -123,7 +123,7 @@ export default function Footer({ config }: FooterProps) {
 
           {/* Contact (Col 4) */}
           <div className="md:col-span-4 flex flex-col gap-3">
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-2">
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-3">
               Direct Contact
             </h4>
             <div className="space-y-3.5 text-xs sm:text-sm leading-relaxed text-slate-500">
@@ -158,7 +158,7 @@ export default function Footer({ config }: FooterProps) {
           {/* Scroll to Top Trigger */}
           <button
             onClick={handleScrollToTop}
-            className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:bg-slate-800 transition-all cursor-pointer"
+            className="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:bg-slate-800 hover:-translate-y-0.5 transition-all cursor-pointer"
             title="Scroll to page top"
             id="scroll-top-btn"
           >

@@ -114,7 +114,7 @@ export default function AppointmentForm({ config }: AppointmentFormProps) {
             <span className={`text-xs font-bold uppercase tracking-widest ${config.colors.primaryText}`}>
               In-Take Scheduling
             </span>
-            <h2 className="font-sans font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 leading-tight tracking-tight">
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 leading-tight tracking-tight">
               Secure Your Consult Appointment Today
             </h2>
             <p className="font-sans text-sm sm:text-base text-slate-500 leading-relaxed">
@@ -146,7 +146,7 @@ export default function AppointmentForm({ config }: AppointmentFormProps) {
 
           {/* Right Column: Interactive Booking Card (Col 7) */}
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xl overflow-hidden p-6 sm:p-9 relative">
+            <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xl shadow-slate-900/5 overflow-hidden p-6 sm:p-9 relative">
               
               {/* Dynamic Header */}
               <div className="flex items-center gap-3.5 pb-6 mb-6 border-b border-slate-100">
@@ -179,7 +179,7 @@ export default function AppointmentForm({ config }: AppointmentFormProps) {
                         required
                         value={formData.fullName}
                         onChange={handleChange}
-                        className="block w-full pl-10 pr-3 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-400 transition-colors"
+                        className="block w-full pl-10 pr-3 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:ring-4 focus:ring-slate-100 transition-all"
                         placeholder="Johnathan Doe"
                       />
                     </div>
@@ -222,8 +222,8 @@ export default function AppointmentForm({ config }: AppointmentFormProps) {
                         required
                         value={formData.preferredDate}
                         onChange={handleChange}
-                        className="block w-full px-3 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-400 transition-colors cursor-pointer"
-                      />
+                        className="block w-full px-3 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:ring-4 focus:ring-slate-100 transition-all cursor-pointer"
+                        />
                     </div>
 
                   </div>
@@ -266,7 +266,7 @@ export default function AppointmentForm({ config }: AppointmentFormProps) {
                       rows={3}
                       value={formData.message}
                       onChange={handleChange}
-                      className="block w-full px-3.5 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-400 transition-colors resize-none"
+                      className="block w-full px-3.5 py-2.5 bg-white border border-slate-200 rounded-lg text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-slate-400 focus:ring-4 focus:ring-slate-100 transition-all resize-none"
                       placeholder="e.g., severe joint pain, aesthetic skin questions, routine checkup..."
                     />
                   </div>
@@ -291,8 +291,8 @@ export default function AppointmentForm({ config }: AppointmentFormProps) {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full py-3.5 px-4 rounded-lg font-sans text-xs sm:text-sm font-semibold text-white shadow-sm flex items-center justify-center gap-2 transition-all duration-200 cursor-pointer ${
-                      isSubmitting ? 'opacity-85 cursor-not-allowed' : `${config.colors.primary} ${config.colors.primaryHover}`
+                    className={`w-full py-3.5 px-4 rounded-lg font-sans text-sm font-semibold text-white shadow-md flex items-center justify-center gap-2 transition-all duration-200 cursor-pointer ${
+                      isSubmitting ? 'opacity-85 cursor-not-allowed' : `${config.colors.primary} ${config.colors.primaryHover} hover:shadow-lg hover:-translate-y-0.5`
                     }`}
                     id="booking-submit-btn"
                   >
@@ -322,6 +322,9 @@ export default function AppointmentForm({ config }: AppointmentFormProps) {
                   <h4 className="text-lg font-extrabold text-slate-900">Intake Request Submitted</h4>
                   <p className="text-xs text-slate-500 mt-2 max-w-md mx-auto leading-relaxed">
                     Thank you, <strong className="text-slate-800">{formData.fullName}</strong>. Your clinical request has been queued. A patient care coordinator will contact you shortly to confirm your reservation.
+                  </p>
+                  <p className="text-[10px] text-slate-400 mt-2 max-w-md mx-auto leading-relaxed italic">
+                    This is a demonstration website. No data has been sent or stored on a server.
                   </p>
 
                   {/* Reference Ticket info */}
