@@ -61,8 +61,8 @@ export default function Navbar({ config }: NavbarProps) {
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 py-3'
-          : 'bg-white border-b border-slate-50 py-4'
+          ? 'bg-white/95 backdrop-blur-md shadow-sm shadow-slate-900/5 border-b border-slate-100 py-3'
+          : 'bg-white border-b border-transparent py-4'
       }`}
       id="navbar-container"
     >
@@ -79,7 +79,7 @@ export default function Navbar({ config }: NavbarProps) {
               <LucideIcon name={brandIcon} size={22} />
             </div>
             <div className="flex flex-col">
-              <span className="font-sans font-bold text-lg tracking-tight text-slate-900 leading-none">
+              <span className="font-display font-extrabold text-lg tracking-tight text-slate-900 leading-none">
                 {config.brandName}
               </span>
               <span className="text-[10px] text-slate-400 tracking-wider font-semibold uppercase mt-0.5">
@@ -95,7 +95,7 @@ export default function Navbar({ config }: NavbarProps) {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleScrollTo(e, link.href)}
-                className="font-sans text-[13px] font-medium text-slate-600 hover:text-slate-900 transition-colors py-1.5 border-b-2 border-transparent hover:border-slate-300"
+                className={`font-sans text-[13px] font-semibold text-slate-600 hover:text-slate-900 transition-colors py-1.5 border-b-2 border-transparent hover:border-slate-300`}
                 id={`desktop-nav-${link.name.toLowerCase().replace(' ', '-')}`}
               >
                 {link.name}
@@ -108,7 +108,7 @@ export default function Navbar({ config }: NavbarProps) {
             <a
               href="#appointment"
               onClick={(e) => handleScrollTo(e, '#appointment')}
-              className={`flex items-center gap-1.5 px-4.5 py-2 rounded-lg font-sans text-xs font-semibold text-white shadow-sm transition-all duration-200 cursor-pointer ${config.colors.primary} ${config.colors.primaryHover}`}
+              className={`flex items-center gap-1.5 px-4.5 py-2 rounded-lg font-sans text-xs font-semibold text-white shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer ${config.colors.primary} ${config.colors.primaryHover}`}
               id="desktop-nav-cta"
             >
               <Calendar size={14} />
@@ -130,8 +130,8 @@ export default function Navbar({ config }: NavbarProps) {
 
       {/* Mobile Drawer Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 top-[60px] z-50 bg-slate-900/40 backdrop-blur-xs lg:hidden transition-all duration-300">
-          <div className="bg-white px-4 py-6 border-b border-slate-100 shadow-xl flex flex-col gap-4 animate-fade-in-down">
+        <div className="fixed inset-0 top-[60px] z-50 bg-slate-900/40 backdrop-blur-xs lg:hidden transition-all duration-300 animate-fade-in">
+          <div className="bg-white px-4 py-6 border-b border-slate-100 shadow-xl shadow-slate-900/10 flex flex-col gap-4 animate-fade-in-down">
             <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <a
@@ -150,7 +150,7 @@ export default function Navbar({ config }: NavbarProps) {
               <a
                 href="#appointment"
                 onClick={(e) => handleScrollTo(e, '#appointment')}
-                className={`flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-sans text-sm font-semibold text-white shadow-sm cursor-pointer ${config.colors.primary} ${config.colors.primaryHover}`}
+                className={`flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-sans text-sm font-semibold text-white shadow-sm active:scale-[0.98] transition-transform cursor-pointer ${config.colors.primary} ${config.colors.primaryHover}`}
                 id="mobile-nav-cta-booking"
               >
                 <Calendar size={16} />

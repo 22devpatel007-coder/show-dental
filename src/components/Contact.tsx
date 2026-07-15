@@ -40,7 +40,7 @@ export default function Contact({ config }: ContactProps) {
           <span className={`text-xs font-bold uppercase tracking-widest ${config.colors.primaryText}`}>
             Inquiries
           </span>
-          <h2 className="font-sans font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 mt-2 tracking-tight">
+          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-2 tracking-tight">
             Connect With Our Patient Care Team
           </h2>
           <div className="w-12 h-1 bg-slate-300 mx-auto mt-4 rounded-full"></div>
@@ -53,7 +53,7 @@ export default function Contact({ config }: ContactProps) {
           <div className="lg:col-span-5 flex flex-col gap-6">
             
             {/* Primary Details Box */}
-            <div className="bg-white p-6 rounded-2xl border border-slate-200/70 shadow-[0_1px_2px_rgba(0,0,0,0.01)] flex flex-col gap-5.5">
+            <div className="bg-white p-6 rounded-2xl border border-slate-200/70 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col gap-5.5">
               <h3 className="text-sm font-extrabold text-slate-900 uppercase tracking-wider pb-3 border-b border-slate-100">
                 Contact Information
               </h3>
@@ -107,7 +107,7 @@ export default function Contact({ config }: ContactProps) {
             </div>
 
             {/* Working Hours Box */}
-            <div className="bg-white p-6 rounded-2xl border border-slate-200/70 shadow-[0_1px_2px_rgba(0,0,0,0.01)] flex flex-col gap-4">
+            <div className="bg-white p-6 rounded-2xl border border-slate-200/70 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col gap-4">
               <h3 className="text-sm font-extrabold text-slate-900 uppercase tracking-wider pb-3 border-b border-slate-100 flex items-center gap-2">
                 <Clock size={16} className={config.colors.primaryText} />
                 <span>Practice Hours</span>
@@ -130,7 +130,7 @@ export default function Contact({ config }: ContactProps) {
 
               <button
                 onClick={handleScrollToAppointment}
-                className={`w-full py-2.5 px-4 rounded-lg font-sans text-xs font-bold uppercase tracking-wider text-center border mt-2 hover:bg-slate-50 transition-colors flex items-center justify-center gap-1.5 cursor-pointer ${config.colors.primaryText}`}
+                className={`w-full py-3 px-4 rounded-lg font-sans text-xs font-bold uppercase tracking-wider text-center border border-slate-200 mt-2 hover:bg-slate-50 hover:border-slate-300 transition-all flex items-center justify-center gap-1.5 cursor-pointer ${config.colors.primaryText}`}
               >
                 <Calendar size={14} />
                 <span>Request Appointment Slot</span>
@@ -141,7 +141,7 @@ export default function Contact({ config }: ContactProps) {
 
           {/* Right Column: Premium Stylized Interactive Map Frame (Col 7) */}
           <div className="lg:col-span-7 flex flex-col">
-            <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xl overflow-hidden flex-1 min-h-[340px] flex flex-col">
+            <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xl shadow-slate-900/5 overflow-hidden flex-1 min-h-[340px] flex flex-col">
               
               {/* Map Title Bar */}
               <div className="bg-slate-50 border-b border-slate-100 px-4.5 py-3 flex items-center justify-between">
@@ -195,7 +195,7 @@ export default function Contact({ config }: ContactProps) {
         href={`https://wa.me/${contact.whatsappNumber}`}
         target="_blank"
         rel="noreferrer"
-        className="fixed bottom-6 right-6 z-40 bg-emerald-600 text-white p-3.5 sm:p-4 rounded-full shadow-2xl hover:bg-emerald-700 transition-all duration-300 hover:scale-105 group flex items-center gap-2 cursor-pointer border border-emerald-500"
+        className="fixed bottom-6 right-6 z-40 bg-emerald-600 text-white p-3.5 sm:p-4 rounded-full shadow-xl shadow-emerald-900/20 hover:bg-emerald-700 transition-all duration-300 hover:-translate-y-0.5 group flex items-center gap-2 cursor-pointer border border-emerald-500"
         title="WhatsApp Emergency Help Desk"
         id="floating-whatsapp-trigger"
       >

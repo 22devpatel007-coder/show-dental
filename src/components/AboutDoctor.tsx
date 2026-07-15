@@ -18,7 +18,7 @@ export default function AboutDoctor({ config }: AboutDoctorProps) {
           <span className={`text-xs font-bold uppercase tracking-widest ${config.colors.primaryText}`}>
             The Clinician
           </span>
-          <h2 className="font-sans font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 mt-2 tracking-tight">
+          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-2 tracking-tight">
             Meet Our Principal Provider
           </h2>
           <div className="w-12 h-1 bg-slate-300 mx-auto mt-4 rounded-full"></div>
@@ -29,11 +29,11 @@ export default function AboutDoctor({ config }: AboutDoctorProps) {
           
           {/* Doctor Image and Quick Specs (Col 5) */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white">
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl shadow-slate-900/10 border border-slate-200 bg-white group">
               <img
                 src={doc.photoUrl}
                 alt={doc.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />
               
@@ -45,11 +45,11 @@ export default function AboutDoctor({ config }: AboutDoctorProps) {
 
             {/* Quick Stats Grid */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white p-4 rounded-xl border border-slate-200/60 shadow-[0_1px_2px_rgba(0,0,0,0.02)]">
+              <div className="bg-white p-4.5 rounded-xl border border-slate-200/70 shadow-sm hover:shadow-md transition-shadow duration-300">
                 <span className="block text-2xl font-black text-slate-900 leading-none">{doc.experienceYears}+</span>
                 <span className="block text-[11px] font-bold text-slate-400 uppercase tracking-wide mt-1.5 leading-tight">Years Active Practice</span>
               </div>
-              <div className="bg-white p-4 rounded-xl border border-slate-200/60 shadow-[0_1px_2px_rgba(0,0,0,0.02)]">
+              <div className="bg-white p-4.5 rounded-xl border border-slate-200/70 shadow-sm hover:shadow-md transition-shadow duration-300">
                 <span className="block text-2xl font-black text-slate-900 leading-none">99.8%</span>
                 <span className="block text-[11px] font-bold text-slate-400 uppercase tracking-wide mt-1.5 leading-tight">Patient Satisfaction</span>
               </div>
@@ -59,7 +59,7 @@ export default function AboutDoctor({ config }: AboutDoctorProps) {
           {/* Doctor Detailed Biography (Col 7) */}
           <div className="lg:col-span-7 flex flex-col gap-6 font-sans">
             <div>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              <h3 className="font-display text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
                 {doc.name}
               </h3>
               <p className={`text-sm font-semibold mt-1.5 flex items-center gap-1.5 ${config.colors.primaryText}`}>
@@ -77,7 +77,7 @@ export default function AboutDoctor({ config }: AboutDoctorProps) {
             </div>
 
             {/* Clinic Philosophy Box */}
-            <div className="bg-white p-5.5 rounded-xl border border-slate-200/80 shadow-[0_2px_4px_rgba(0,0,0,0.01)] flex gap-4">
+            <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm flex gap-4">
               <div className={`p-3 rounded-lg h-fit ${config.colors.primaryLight} ${config.colors.primaryText}`}>
                 <HeartHandshake size={20} />
               </div>

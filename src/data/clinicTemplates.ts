@@ -156,6 +156,33 @@ export const clinicConfig: ClinicConfig = {
         imageUrl: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=600&auto=format&fit=crop'
       }
     ],
+    faq: [
+      {
+        id: 'f1',
+        question: 'Do I need a referral to book an appointment?',
+        answer: 'No referral is needed. You can book directly online, by phone, or via WhatsApp, and our coordinators will confirm the best available slot for you.'
+      },
+      {
+        id: 'f2',
+        question: 'What should I bring to my first visit?',
+        answer: 'Please bring a valid photo ID, your insurance card if applicable, and a list of any current medications. Arriving 10 minutes early helps us complete intake smoothly.'
+      },
+      {
+        id: 'f3',
+        question: 'Do you accept dental insurance?',
+        answer: 'We work with most major dental insurance providers. Our front desk team will verify your coverage and explain any out-of-pocket costs before treatment begins.'
+      },
+      {
+        id: 'f4',
+        question: 'Is emergency dental care available?',
+        answer: 'Yes. We reserve same-day slots for urgent issues such as severe pain, swelling, or trauma. Call our clinic directly for the fastest response.'
+      },
+      {
+        id: 'f5',
+        question: 'How often should I schedule a routine checkup?',
+        answer: 'We recommend a professional cleaning and examination every six months for most patients, though your dentist may suggest a different interval based on your oral health.'
+      }
+    ],
     contact: {
       phone: '+1 (555) 321-4490',
       email: 'hello@auradental.com',

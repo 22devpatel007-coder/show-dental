@@ -18,7 +18,7 @@ export default function Testimonials({ config }: TestimonialsProps) {
           <span className={`text-xs font-bold uppercase tracking-widest ${config.colors.primaryText}`}>
             Patient Stories
           </span>
-          <h2 className="font-sans font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 mt-2 tracking-tight">
+          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-2 tracking-tight">
             Reviews From Our Recovered Patients
           </h2>
           <p className="font-sans text-sm sm:text-base text-slate-500 mt-3 max-w-2xl mx-auto">
@@ -32,7 +32,7 @@ export default function Testimonials({ config }: TestimonialsProps) {
           {testimonials.map((test) => (
             <div
               key={test.id}
-              className="bg-white p-6 sm:p-7 rounded-xl border border-slate-200/70 shadow-[0_1px_3px_rgba(0,0,0,0.01)] flex flex-col justify-between"
+              className="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200/70 shadow-sm hover:shadow-lg hover:shadow-slate-900/5 transition-shadow duration-300 flex flex-col justify-between"
               id={`testimonial-card-${test.id}`}
             >
               {/* Review Text Area */}
@@ -51,8 +51,8 @@ export default function Testimonials({ config }: TestimonialsProps) {
                 </div>
 
                 {/* Review Copy */}
-                <p className="font-sans text-xs sm:text-sm text-slate-600 leading-relaxed italic">
-                  "{test.review}"
+                <p className="font-sans text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  {test.review}
                 </p>
               </div>
 
@@ -61,7 +61,7 @@ export default function Testimonials({ config }: TestimonialsProps) {
                 <img
                   src={test.photoUrl}
                   alt={test.name}
-                  className="w-10 h-10 rounded-full object-cover border border-slate-200"
+                  className="w-11 h-11 rounded-full object-cover border-2 border-white shadow-sm ring-1 ring-slate-200"
                   referrerPolicy="no-referrer"
                 />
                 <div>
@@ -85,7 +85,7 @@ export default function Testimonials({ config }: TestimonialsProps) {
         </div>
 
         {/* Aggregate Ratings Info */}
-        <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 bg-slate-50 p-6 rounded-xl border border-slate-200/50 max-w-4xl mx-auto text-center sm:text-left">
+        <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 bg-slate-50 p-7 rounded-2xl border border-slate-200/60 shadow-sm max-w-4xl mx-auto text-center sm:text-left">
           <div>
             <h4 className="text-sm font-black text-slate-900">Highest Rated Private Specialist in the Region</h4>
             <p className="text-xs text-slate-500 mt-1 leading-relaxed">Our clinical statistics are aggregated from verified third-party patient experience surveys.</p>

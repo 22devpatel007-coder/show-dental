@@ -28,7 +28,7 @@ export default function Gallery({ config }: GalleryProps) {
           <span className={`text-xs font-bold uppercase tracking-widest ${config.colors.primaryText}`}>
             Our Facilities
           </span>
-          <h2 className="font-sans font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 mt-2 tracking-tight">
+          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-2 tracking-tight">
             Take a Virtual Tour of Our Private Practice
           </h2>
           <p className="font-sans text-sm sm:text-base text-slate-500 mt-3 max-w-2xl mx-auto">
@@ -45,10 +45,10 @@ export default function Gallery({ config }: GalleryProps) {
               <button
                 key={category}
                 onClick={() => setActiveFilter(category)}
-                className={`px-4 py-1.5 rounded-full text-xs font-semibold border transition-all duration-200 cursor-pointer ${
+                className={`px-4.5 py-2 rounded-full text-xs font-semibold border transition-all duration-200 cursor-pointer ${
                   isActive
-                    ? `${config.colors.primary} text-white border-transparent shadow-sm`
-                    : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50 hover:text-slate-900'
+                    ? `${config.colors.primary} text-white border-transparent shadow-md`
+                    : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50 hover:text-slate-900 hover:border-slate-300'
                 }`}
                 id={`gallery-filter-${category.toLowerCase().replace(' ', '-')}`}
               >
@@ -64,13 +64,13 @@ export default function Gallery({ config }: GalleryProps) {
             <div
               key={item.id}
               onClick={() => setSelectedImage(item.imageUrl)}
-              className="group relative rounded-xl overflow-hidden aspect-[4/3] bg-white border border-slate-200 shadow-[0_1px_2px_rgba(0,0,0,0.02)] cursor-zoom-in"
+              className="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:shadow-slate-900/10 transition-shadow duration-300 cursor-zoom-in"
               id={`gallery-item-${item.id}`}
             >
               <img
                 src={item.imageUrl}
                 alt={item.title}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
               
@@ -102,7 +102,7 @@ export default function Gallery({ config }: GalleryProps) {
             onClick={() => setSelectedImage(null)}
             id="gallery-lightbox-modal"
           >
-            <div className="relative max-w-4xl max-h-[85vh] rounded-lg overflow-hidden border border-slate-800 shadow-2xl bg-slate-900">
+            <div className="relative max-w-4xl max-h-[85vh] rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900 animate-fade-in">
               <img
                 src={selectedImage}
                 alt="Enlarged Clinical Room Preview"

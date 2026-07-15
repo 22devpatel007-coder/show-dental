@@ -36,7 +36,7 @@ export default function Services({ config }: ServicesProps) {
           <span className={`text-xs font-bold uppercase tracking-widest ${config.colors.primaryText}`}>
             Our Clinical Expertise
           </span>
-          <h2 className="font-sans font-extrabold text-2xl sm:text-3xl md:text-4xl text-slate-900 mt-2 tracking-tight">
+          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-2 tracking-tight">
             Specialized Treatments & Procedures
           </h2>
           <p className="font-sans text-sm sm:text-base text-slate-500 mt-3 max-w-2xl mx-auto">
@@ -50,17 +50,17 @@ export default function Services({ config }: ServicesProps) {
           {services.map((service) => (
             <div
               key={service.id}
-              className="group bg-white p-6 rounded-xl border border-slate-200/70 hover:border-slate-300 shadow-[0_1px_2px_rgba(0,0,0,0.02)] hover:shadow-md transition-all duration-300 flex flex-col justify-between h-full"
+              className="group bg-white p-7 rounded-2xl border border-slate-200/70 hover:border-slate-300 shadow-sm hover:shadow-xl hover:shadow-slate-900/5 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full"
               id={`service-card-${service.id}`}
             >
               <div>
                 {/* Icon Container */}
-                <div className={`p-3 rounded-lg w-fit transition-colors ${config.colors.primaryLight} ${config.colors.primaryText} group-hover:bg-slate-100 group-hover:text-slate-800`}>
-                  <LucideIcon name={service.iconName} size={20} />
+                <div className={`p-3.5 rounded-xl w-fit transition-all duration-300 ${config.colors.primaryLight} ${config.colors.primaryText} group-hover:scale-110`}>
+                  <LucideIcon name={service.iconName} size={22} />
                 </div>
 
                 {/* Service Title */}
-                <h3 className="font-sans font-bold text-base text-slate-900 mt-5 group-hover:text-slate-950 transition-colors">
+                <h3 className="font-sans font-bold text-lg text-slate-900 mt-5 group-hover:text-slate-950 transition-colors">
                   {service.title}
                 </h3>
 
