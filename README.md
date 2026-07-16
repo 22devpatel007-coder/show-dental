@@ -75,7 +75,7 @@ src/
 Clone the repository
 
 ```bash
-git clone https://github.com/your-username/dental-clinic-website.git
+git clone https://github.com/22devpatel007-coder/dental-clinic-website-template.git
 ```
 
 Navigate to the project
